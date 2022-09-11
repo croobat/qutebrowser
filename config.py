@@ -299,4 +299,4 @@ dracula.draw.blood(c, {
     }
 })
 
-# c.content.user_stylesheets =  ['~/.config/qutebrowser/styles.css']
+c.content.user_stylesheets =  ['~/.config/qutebrowser/styles.css']
