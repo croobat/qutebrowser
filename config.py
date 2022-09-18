@@ -21,10 +21,10 @@ c.url.searchengines = {'DEFAULT': 'https://www.google.com/search?q={}',
                        'ml': 'https://listado.mercadolibre.com.mx/{}',
                        'aw': 'https://wiki.archlinux.org/?search={}',
                        'aur': 'https://archlinux.org/packages/?sort=&q={}',
-                       'pirate': 'https://thepiratebay.org/search.php?q={}',
-                       'red': 'https://www.reddit.com/r/{}',
                        'pex': 'https://www.pexels.com/search/{}',
                        'gh': 'https://github.com/search?q={}',
+                       'pirate': 'https://thepiratebay.org/search.php?q={}',
+                       'reddit': 'https://www.reddit.com/r/{}',
                        'wiki': 'https://en.wikipedia.org/wiki/{}'}
 
 c.completion.web_history.exclude = [

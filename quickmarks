@@ -34,7 +34,7 @@
 <MIS>thin https://www.thingiverse.com/
 <MIS>tinypng https://tinypng.com/
 <MIS>trad https://translate.google.com/?hl=es
-<SOC>red https://www.reddit.com/
+<SOC>reddit https://www.reddit.com/
 <STO>ali https://es.aliexpress.com/
 <STO>am https://www.amazon.com.mx/
 <STO>eba https://www.ebay.com/
@@ -94,7 +94,7 @@ pdf https://www.ilovepdf.com/
 thin https://www.thingiverse.com/
 tinypng https://tinypng.com/
 trad https://translate.google.com/?hl=es
-red https://www.reddit.com/
+reddit https://www.reddit.com/
 ali https://es.aliexpress.com/
 am https://www.amazon.com.mx/
 eba https://www.ebay.com/
@@ -118,7 +118,6 @@ tw https://www.twitch.tv/
 yt https://www.youtube.com/
 yth https://www.youtube.com/feed/history
 ytl https://www.youtube.com/playlist?list=WL
-test https://www.reddit.com/r/qutebrowser/comments/ddodbu/comments_in_quickmarks_file/
 <DEV>linkedin https://www.linkedin.com/
 linkedin https://www.linkedin.com/
 <DEV>nerd-icons https://www.nerdfonts.com/cheat-sheet
@@ -140,4 +139,6 @@ php https://www.php.net/docs.php
 angular https://angular.io/docs
 js https://developer.mozilla.org/en-US/docs/Web/JavaScript
 gitlab https://about.gitlab.com/
-i  https://www.google.com/search?q=expediente%20estudiante%20upiiz
+i https://www.google.com/search?q=expediente%20estudiante%20upiiz
+penpot https://penpot.app/
+<DEV>penpot https://penpot.app/
