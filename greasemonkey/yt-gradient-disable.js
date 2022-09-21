@@ -10,3 +10,4 @@
 // ==/UserScript==
 $('.ytp-gradient-bottom').remove();
 $('.ytp-gradient-top').remove();
+$('.ytp-volume-slider').css({ 'background-color':'darkgray' });
