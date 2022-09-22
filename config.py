@@ -45,8 +45,7 @@ c.aliases = {'q': 'close',
 config.bind('t', 'set-cmd-text -s :open -t')
 config.bind('xb', 'config-cycle statusbar.show always never')
 config.bind('xt', 'config-cycle tabs.show always never')
-config.bind(
-    'xx', 'config-cycle statusbar.show always never;; config-cycle tabs.show always never')
+config.bind( 'xx', 'config-cycle statusbar.show always never;; config-cycle tabs.show always never')
 config.bind('j', 'run-with-count 3 scroll down')
 config.bind('k', 'run-with-count 3 scroll up')
 config.bind('<Ctrl-j>', 'run-with-count 15 scroll down')
@@ -74,9 +73,9 @@ config.bind("<Ctrl-w>", "fake-key <Ctrl-Backspace>", "insert")
 config.bind("<Ctrl-u>", "fake-key <Shift-Home><Delete>", "insert")
 config.bind("<Ctrl-k>", "fake-key <Shift-End><Delete>", "insert")
 
-# Youtube
-config.bind('M', 'hint links spawn mpv {hint-url}')
-#config.bind('Z', 'hint links spawn st -e youtube-dl {hint-url}')
+# Hints
+config.bind('yf', 'hint links yank')
+config.bind('yF', 'hint all yank')
 
 # Bindings for cycling through CSS stylesheets from Solarized Everything CSS:
 # https://github.com/alphapapa/solarized-everything-css
