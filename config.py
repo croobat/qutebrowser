@@ -24,7 +24,7 @@ c.url.searchengines = {'DEFAULT': 'https://www.google.com/search?q={}',
                        'pex': 'https://www.pexels.com/search/{}',
                        'gh': 'https://github.com/search?q={}',
                        'pirate': 'https://thepiratebay.org/search.php?q={}',
-                       'reddit': 'https://www.reddit.com/r/{}',
+                       'red': 'https://www.reddit.com/r/{}',
                        'wiki': 'https://en.wikipedia.org/wiki/{}'}
 
 c.completion.web_history.exclude = [
