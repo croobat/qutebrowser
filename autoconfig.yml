@@ -44,6 +44,6 @@ settings:
   scrolling.smooth:
     global: true
   statusbar.show:
-    global: always
+    global: never
   tabs.show:
-    global: always
+    global: never

@@ -28,9 +28,7 @@ c.completion.web_history.exclude = [
     'google.com'
 ]
 
-# Aliases for commands. The keys of the given dictionary are the
-# aliases, while the values are the commands they map to.
-# Type: Dict
+# Aliases
 c.aliases = {'q': 'close',
              'qa': 'quit',
              'w': 'session-save',
@@ -39,49 +37,53 @@ c.aliases = {'q': 'close',
              }
 
 # Bindings
-config.bind('t', 'set-cmd-text -s :open -t')
-config.bind('xb', 'config-cycle statusbar.show always never')
-config.bind('xt', 'config-cycle tabs.show always never')
-config.bind( 'xx', 'config-cycle statusbar.show always never;; config-cycle tabs.show always never')
-config.bind('j', 'run-with-count 3 scroll down')
-config.bind('k', 'run-with-count 3 scroll up')
-config.bind('<Ctrl-j>', 'run-with-count 15 scroll down')
-config.bind('<Ctrl-k>', 'run-with-count 15 scroll up')
-config.bind('J', 'tab-prev')
-config.bind('K', 'tab-next')
+bindings = {
+    # Faster
+    '<Ctrl-j>': 'run-with-count 15 scroll down',
+    '<Ctrl-k>': 'run-with-count 15 scroll up',
+    # VIM like
+    't': 'set-cmd-text -s : open -t',
+    'xb': 'config-cycle statusbar.show always never',
+    'xt': 'config-cycle tabs.show always never',
+     'xx': 'config-cycle statusbar.show always never;; config-cycle tabs.show always never',
+    'j': 'run-with-count 3 scroll down',
+    'k': 'run-with-count 3 scroll up',
+    'J': 'tab-prev',
+    'K': 'tab-next',
+    'ZQ': 'quit',
+    'ZZ': 'quit --save',
+    # Hints
+    'yf': 'hint links yank',
+    'yF': 'hint all yank',
+    # Stylesheets
+    ',,': 'greasemonkey-reload ;; reload',
+    ',z': 'config-cycle content.user_stylesheets ~/.config/qutebrowser/solarized-everything-css/css/apprentice/apprentice-all-sites.css ""',
+    ',x': 'config-cycle content.user_stylesheets ~/.config/qutebrowser/solarized-everything-css/css/darculized/darculized-all-sites.css ""',
+    ',c': 'config-cycle content.user_stylesheets ~/.config/qutebrowser/solarized-everything-css/css/gruvbox/gruvbox-all-sites.css ""',
+    ',v': 'config-cycle content.user_stylesheets ~/.config/qutebrowser/solarized-everything-css/css/solarized-dark/solarized-dark-all-sites.css ""',
+    ',b': 'config-cycle content.user_stylesheets ~/.config/qutebrowser/solarized-everything-css/css/solarized-light/solarized-light-all-sites.css ""'
+}
+for binding in bindings:
+    config.bind(binding, bindings[binding])
 
-config.bind('ZQ', 'quit')
-config.bind('ZZ', 'quit --save')
-
-config.bind(',,', 'greasemonkey-reload;; reload')
-
-config.bind("<Ctrl-h>", "fake-key <Backspace>", "insert")
-config.bind("<Ctrl-a>", "fake-key <Home>", "insert")
-config.bind("<Ctrl-e>", "fake-key <End>", "insert")
-config.bind("<Ctrl-b>", "fake-key <Left>", "insert")
-config.bind("<Mod1-b>", "fake-key <Ctrl-Left>", "insert")
-config.bind("<Ctrl-f>", "fake-key <Right>", "insert")
-config.bind("<Mod1-f>", "fake-key <Ctrl-Right>", "insert")
-config.bind("<Ctrl-p>", "fake-key <Up>", "insert")
-config.bind("<Ctrl-n>", "fake-key <Down>", "insert")
-config.bind("<Mod1-d>", "fake-key <Ctrl-Delete>", "insert")
-config.bind("<Ctrl-d>", "fake-key <Delete>", "insert")
-config.bind("<Ctrl-w>", "fake-key <Ctrl-Backspace>", "insert")
-config.bind("<Ctrl-u>", "fake-key <Shift-Home><Delete>", "insert")
-config.bind("<Ctrl-k>", "fake-key <Shift-End><Delete>", "insert")
-
-# Hints
-config.bind('yf', 'hint links yank')
-config.bind('yF', 'hint all yank')
-
-# Bindings for cycling through CSS stylesheets from Solarized Everything CSS:
-# https://github.com/alphapapa/solarized-everything-css
-config.bind(',z', 'config-cycle content.user_stylesheets ~/.config/qutebrowser/solarized-everything-css/css/apprentice/apprentice-all-sites.css ""')
-config.bind(',x', 'config-cycle content.user_stylesheets ~/.config/qutebrowser/solarized-everything-css/css/darculized/darculized-all-sites.css ""')
-config.bind(',c', 'config-cycle content.user_stylesheets ~/.config/qutebrowser/solarized-everything-css/css/gruvbox/gruvbox-all-sites.css ""')
-config.bind(',v', 'config-cycle content.user_stylesheets ~/.config/qutebrowser/solarized-everything-css/css/solarized-dark/solarized-dark-all-sites.css ""')
-config.bind(',b', 'config-cycle content.user_stylesheets ~/.config/qutebrowser/solarized-everything-css/css/solarized-light/solarized-light-all-sites.css ""')
-
+insertBindings = {
+    "<Ctrl-h>": "fake-key <Backspace>",
+    "<Ctrl-a>": "fake-key <Home>",
+    "<Ctrl-e>": "fake-key <End>",
+    "<Ctrl-b>": "fake-key <Left>",
+    "<Mod1-b>": "fake-key <Ctrl-Left>",
+    "<Ctrl-f>": "fake-key <Right>",
+    "<Mod1-f>": "fake-key <Ctrl-Right>",
+    "<Ctrl-p>": "fake-key <Up>",
+    "<Ctrl-n>": "fake-key <Down>",
+    "<Mod1-d>": "fake-key <Ctrl-Delete>",
+    "<Ctrl-d>": "fake-key <Delete>",
+    "<Ctrl-w>": "fake-key <Ctrl-Backspace>",
+    "<Ctrl-u>": "fake-key <Shift-Home><Delete>",
+    "<Ctrl-k>": "fake-key <Shift-End><Delete>"
+}
+for binding in insertBindings:
+    config.bind(binding, insertBindings[binding], 'insert')
 
 # Fonts
 c.fonts.default_family = 'JetBrainsMono Nerd Font'
