@@ -37,36 +37,36 @@ c.aliases = {
     'w': 'session-save',
     'wq': 'quit --save',
     'wqa': 'quit --save',
+    'color-darculized': 'config-cycle content.user_stylesheets ~/.config/qutebrowser/solarized-everything-css/css/darculized/darculized-all-sites.css ""',
+    'color-gruvbox': 'config-cycle content.user_stylesheets ~/.config/qutebrowser/solarized-everything-css/css/gruvbox/gruvbox-all-sites.css ""',
+    'color-solarized-apprentice': 'config-cycle content.user_stylesheets ~/.config/qutebrowser/solarized-everything-css/css/apprentice/apprentice-all-sites.css ""',
+    'color-solarized-dark': 'config-cycle content.user_stylesheets ~/.config/qutebrowser/solarized-everything-css/css/solarized-dark/solarized-dark-all-sites.css ""',
+    'color-solarized-light': 'config-cycle content.user_stylesheets ~/.config/qutebrowser/solarized-everything-css/css/solarized-light/solarized-light-all-sites.css ""',
 }
 
 #  ╭──────────╮
 #  │ Bindings │
 #  ╰──────────╯
 bindings = {
-    # Faster
-    '<Ctrl-j>': 'run-with-count 15 scroll down',
-    '<Ctrl-k>': 'run-with-count 15 scroll up',
-    # VIM like
-    't': 'set-cmd-text -s : open -t',
-    'xb': 'config-cycle statusbar.show always never',
-    'xt': 'config-cycle tabs.show always never',
-     'xx': 'config-cycle statusbar.show always never;; config-cycle tabs.show always never',
+    # Vim-like
     'j': 'run-with-count 3 scroll down',
     'k': 'run-with-count 3 scroll up',
+    '<Ctrl-j>': 'run-with-count 15 scroll down',
+    '<Ctrl-k>': 'run-with-count 15 scroll up',
     'J': 'tab-prev',
     'K': 'tab-next',
+    't': 'set-cmd-text -s : open -t',
     'ZQ': 'quit',
     'ZZ': 'quit --save',
+    # Toggle show
+    'xb': 'config-cycle statusbar.show always never',
+    'xt': 'config-cycle tabs.show always never',
+    'xx': 'config-cycle statusbar.show always never;; config-cycle tabs.show always never',
     # Hints
     'yf': 'hint links yank',
     'yF': 'hint all yank',
-    # Stylesheets
-    ',,': 'greasemonkey-reload ;; reload',
-    ',z': 'config-cycle content.user_stylesheets ~/.config/qutebrowser/solarized-everything-css/css/apprentice/apprentice-all-sites.css ""',
-    ',x': 'config-cycle content.user_stylesheets ~/.config/qutebrowser/solarized-everything-css/css/darculized/darculized-all-sites.css ""',
-    ',c': 'config-cycle content.user_stylesheets ~/.config/qutebrowser/solarized-everything-css/css/gruvbox/gruvbox-all-sites.css ""',
-    ',v': 'config-cycle content.user_stylesheets ~/.config/qutebrowser/solarized-everything-css/css/solarized-dark/solarized-dark-all-sites.css ""',
-    ',b': 'config-cycle content.user_stylesheets ~/.config/qutebrowser/solarized-everything-css/css/solarized-light/solarized-light-all-sites.css ""'
+    # Greasemonkey plugins
+    ',': 'greasemonkey-reload ;; reload',
 }
 for binding in bindings:
     config.bind(binding, bindings[binding])
@@ -123,7 +123,7 @@ c.tabs.show = 'multiple'
 #  ╭───────────────╮
 #  │ ## Permisions │
 #  ╰───────────────╯
-# JavaScript
+# JavaScript{{{
 config.set('content.javascript.enabled', True, 'chrome-devtools://*')
 config.set('content.javascript.enabled', True, 'devtools://*')
 config.set('content.javascript.enabled', True, 'chrome://*/*')
@@ -162,11 +162,12 @@ config.set(
     'Mozilla/5.0 ({os_info}) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99 Safari/537.36',
     'https://*.slack.com/*'
 )
+# }}}
 
 #  ╭───────╮
 #  │ Style │
 #  ╰───────╯
-# Dark mode
+# Dark mode{{{
 c.colors.webpage.preferred_color_scheme = 'dark'
 config.set("colors.webpage.darkmode.enabled", True)
 
@@ -175,4 +176,4 @@ import dracula.draw
 dracula.draw.blood(c)
 
 # Custom styles
-c.content.user_stylesheets =  ['~/.config/qutebrowser/styles.css']
+c.content.user_stylesheets =  ['~/.config/qutebrowser/styles.css']# }}}
