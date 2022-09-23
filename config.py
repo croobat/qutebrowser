@@ -2,12 +2,9 @@
 #   qute://help/configuring.html
 #   qute://help/settings.html
 
-import dracula.draw
 import subprocess
 import os
 from qutebrowser.api import interceptor
-
-c.colors.webpage.bg = '#242630'
 
 # Load existing settings made via :set
 config.load_autoconfig()
@@ -290,12 +287,8 @@ c.statusbar.show = 'never'
 c.tabs.show = 'multiple'
 
 # Color scheme
+import dracula.draw
+dracula.draw.blood(c)
 
-dracula.draw.blood(c, {
-    'spacing': {
-        'vertical': 1,
-        'horizontal': 0
-    }
-})
-
+# Load custom stylesheet
 c.content.user_stylesheets =  ['~/.config/qutebrowser/styles.css']

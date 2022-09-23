@@ -20,8 +20,8 @@ def blood(c, options={}):
     }
 
     spacing = options.get('spacing', {
-        'vertical': 5,
-        'horizontal': 5
+        'vertical': 1,
+        'horizontal': 0
     })
 
     padding = options.get('padding', {
@@ -108,10 +108,12 @@ def blood(c, options={}):
 
     # Background color for hints. Note that you can use a `rgba(...)` value
     # for transparency.
-    c.colors.hints.bg = palette['background']
+    # c.colors.hints.bg = palette['background']
+    c.colors.hints.bg = '#bd93f9'
 
     # Font color for hints.
-    c.colors.hints.fg = palette['purple']
+    # c.colors.hints.fg = palette['purple']
+    c.colors.hints.fg = '#282a36'
 
     # Hints
     c.hints.border = '1px solid ' + palette['background-alt']
@@ -301,10 +303,10 @@ def blood(c, options={}):
     # ## Type: QtColor
     c.colors.tabs.selected.odd.fg = palette['foreground']
 
+    # Loading background
+    c.colors.webpage.bg = '#242630'
+
     # Tab padding
     c.tabs.padding = padding
     c.tabs.indicator.width = 1
     c.tabs.favicons.scale = 1
-
-    c.colors.hints.fg = '#282a36'
-    c.colors.hints.bg = '#bd93f9'
