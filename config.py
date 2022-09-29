@@ -25,7 +25,9 @@ c.url.searchengines = {
     'gh': 'https://github.com/search?q={}',
     'pirate': 'https://thepiratebay.org/search.php?q={}',
     'red': 'https://www.reddit.com/r/{}',
-    'wiki': 'https://en.wikipedia.org/wiki/{}'
+    'wiki': 'https://en.wikipedia.org/wiki/{}',
+    # temporal
+    'doli': 'https://wiki.dolibarr.org/index.php?title=Table_llx_{}'
 }
 
 #  ╭─────────╮
