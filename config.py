@@ -26,6 +26,7 @@ c.url.searchengines = {
     'pirate': 'https://thepiratebay.org/search.php?q={}',
     'red': 'https://www.reddit.com/r/{}',
     'wiki': 'https://en.wikipedia.org/wiki/{}',
+    'node' : 'https://www.npmjs.com/search?q={}',
     # temporal
     'doli': 'https://wiki.dolibarr.org/index.php?title=Table_llx_{}'
 }
