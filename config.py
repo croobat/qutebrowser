@@ -50,6 +50,16 @@ c.aliases = {
 #  ╭──────────╮
 #  │ Bindings │
 #  ╰──────────╯
+# unbindings
+unbindings = {
+    '=',
+    '+',
+    '-',
+}
+for unbinding in unbindings:
+    config.unbind(unbinding, mode='normal')
+
+# bindings
 bindings = {
     # Vim-like
     'j': 'run-with-count 3 scroll down',
@@ -70,6 +80,10 @@ bindings = {
     'yF': 'hint all yank',
     # Greasemonkey plugins
     ',': 'greasemonkey-reload ;; reload',
+    # Better zoom keys
+    '0': 'zoom',
+    '=': 'zoom-in',
+    '-': 'zoom-out',
 }
 for binding in bindings:
     config.bind(binding, bindings[binding])
