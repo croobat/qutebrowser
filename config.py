@@ -27,7 +27,6 @@ c.url.searchengines = {
     'red': 'https://www.reddit.com/r/{}',
     'wiki': 'https://en.wikipedia.org/wiki/{}',
     'node' : 'https://www.npmjs.com/search?q={}',
-    # temporal
     'doli': 'https://wiki.dolibarr.org/index.php?title=Table_llx_{}'
 }
 
@@ -42,9 +41,6 @@ c.aliases = {
     'wqa': 'quit --save',
     'color-darculized': 'config-cycle content.user_stylesheets ~/.config/qutebrowser/solarized-everything-css/css/darculized/darculized-all-sites.css ""',
     'color-gruvbox': 'config-cycle content.user_stylesheets ~/.config/qutebrowser/solarized-everything-css/css/gruvbox/gruvbox-all-sites.css ""',
-    'color-solarized-apprentice': 'config-cycle content.user_stylesheets ~/.config/qutebrowser/solarized-everything-css/css/apprentice/apprentice-all-sites.css ""',
-    'color-solarized-dark': 'config-cycle content.user_stylesheets ~/.config/qutebrowser/solarized-everything-css/css/solarized-dark/solarized-dark-all-sites.css ""',
-    'color-solarized-light': 'config-cycle content.user_stylesheets ~/.config/qutebrowser/solarized-everything-css/css/solarized-light/solarized-light-all-sites.css ""',
 }
 
 #  ╭──────────╮
@@ -62,8 +58,8 @@ for unbinding in unbindings:
 # bindings
 bindings = {
     # Vim-like
-    'j': 'run-with-count 3 scroll down',
-    'k': 'run-with-count 3 scroll up',
+    'j': 'run-with-count 5 scroll down',
+    'k': 'run-with-count 5 scroll up',
     '<Ctrl-j>': 'run-with-count 15 scroll down',
     '<Ctrl-k>': 'run-with-count 15 scroll up',
     'J': 'tab-prev',
@@ -111,11 +107,11 @@ for binding in insertBindings:
 #  │ Options │
 #  ╰─────────╯
 # Font
-c.fonts.default_family = 'JetBrainsMono Nerd Font'
-c.fonts.default_size = '10.5pt'
+c.fonts.default_family = 'Recursive Mono Linear Static'
+c.fonts.default_size = '9pt'
 
 # Smooth scroll
-c.scrolling.smooth = True
+c.scrolling.smooth = False
 
 # Youtube autoplay
 c.content.autoplay = False

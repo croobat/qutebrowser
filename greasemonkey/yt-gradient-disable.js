@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name        OperaGX Force Dark Mode Fix/White Overlay Fix
+// @name        Dark Mode Fix/White Overlay Fix
 // @namespace   namespace
 // @include     https://www.youtube*
 // @include     http://www.youtube*
