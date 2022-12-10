@@ -58,8 +58,8 @@ for unbinding in unbindings:
 # bindings
 bindings = {
     # Vim-like
-    'j': 'run-with-count 5 scroll down',
-    'k': 'run-with-count 5 scroll up',
+    'j': 'run-with-count 4 scroll down',
+    'k': 'run-with-count 4 scroll up',
     '<Ctrl-j>': 'run-with-count 15 scroll down',
     '<Ctrl-k>': 'run-with-count 15 scroll up',
     'J': 'tab-prev',
