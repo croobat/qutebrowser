@@ -10,13 +10,25 @@ def blood(c, options={}):
         'foreground-alt': '#e0e0e0',
         'foreground-attention': '#ffffff',
         'comment': '#6272a4',
+
         'cyan': '#8be9fd',
-        'green': '#50fa7b',
+
+        # 'green': '#50fa7b',
+        'green': '#90ee90',
+
         'orange': '#ffb86c',
+
         'pink': '#ff79c6',
+        # 'pink': '#ffb6c1',
+
         'purple': '#bd93f9',
-        'red': '#ff5555',
-        'yellow': '#f1fa8c'
+        'light-purple': '#cbc3e3',
+
+        # 'red': '#ff5555',
+        'red': '#ffcccb',
+
+        # 'yellow': '#f1fa8c'
+        'yellow': '#ffffe0'
     }
 
     spacing = options.get('spacing', {
@@ -109,11 +121,11 @@ def blood(c, options={}):
     # Background color for hints. Note that you can use a `rgba(...)` value
     # for transparency.
     # c.colors.hints.bg = palette['background']
-    c.colors.hints.bg = '#bd93f9'
+    c.colors.hints.bg = palette['purple']
 
     # Font color for hints.
     # c.colors.hints.fg = palette['purple']
-    c.colors.hints.fg = '#282a36'
+    c.colors.hints.fg =palette['border']
 
     # Hints
     c.hints.border = '1px solid ' + palette['background-alt']
@@ -125,10 +137,10 @@ def blood(c, options={}):
     c.colors.keyhint.bg = palette['background']
 
     # Text color for the keyhint widget.
-    c.colors.keyhint.fg = palette['purple']
+    c.colors.keyhint.fg = palette['light-purple']
 
     # Highlight color for keys to complete the current keychain.
-    c.colors.keyhint.suffix.fg = palette['selection']
+    c.colors.keyhint.suffix.fg = palette['purple']
 
     # Background color of an error message.
     c.colors.messages.error.bg = palette['background']
