@@ -41,6 +41,8 @@ settings:
     - '{file}'
     - -c
     - normal {line}G{column0}l
+  keyhint.delay:
+    global: 200
   scrolling.smooth:
     global: true
   statusbar.show:
