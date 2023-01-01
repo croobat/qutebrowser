@@ -17,14 +17,14 @@ c.url.start_pages = 'https://www.google.com'
 c.url.searchengines = {
     'DEFAULT': 'https://www.google.com/search?q={}',
     'yt': 'https://www.youtube.com/results?search_query={}',
-    'am': 'https://www.amazon.com/s?k={}',
-    'ml': 'https://listado.mercadolibre.com.mx/{}',
+    'amazon': 'https://www.amazon.com/s?k={}',
+    'mercadolibre': 'https://listado.mercadolibre.com.mx/{}',
     'aw': 'https://wiki.archlinux.org/?search={}',
     'aur': 'https://archlinux.org/packages/?sort=&q={}',
-    'pex': 'https://www.pexels.com/search/{}',
+    'pexels': 'https://www.pexels.com/search/{}',
     'gh': 'https://github.com/search?q={}',
     'pirate': 'https://thepiratebay.org/search.php?q={}',
-    'red': 'https://www.reddit.com/r/{}',
+    'reddit': 'https://www.reddit.com/r/{}',
     'wiki': 'https://en.wikipedia.org/wiki/{}',
     'node' : 'https://www.npmjs.com/search?q={}',
     'doli': 'https://wiki.dolibarr.org/index.php?title=Table_llx_{}'
@@ -64,7 +64,6 @@ bindings = {
     '<Ctrl-k>': 'run-with-count 15 scroll up',
     'J': 'tab-prev',
     'K': 'tab-next',
-    't': 'set-cmd-text -s : open -t',
     'ZQ': 'quit',
     'ZZ': 'quit --save',
     # Toggle show
