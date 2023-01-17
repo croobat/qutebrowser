@@ -19,9 +19,16 @@ settings:
     global: false
   colors.webpage.preferred_color_scheme:
     global: dark
+  content.desktop_capture:
+    https://meet.jit.si: true
   content.media.audio_capture:
+    https://demo6.bigbluebutton.org: true
+    https://meet.jit.si: true
     https://teams.microsoft.com: true
+  content.media.audio_video_capture:
+    https://meet.jit.si: true
   content.media.video_capture:
+    https://meet.jit.si: true
     https://teams.microsoft.com: true
   content.notifications.enabled:
     https://platzi.com: true
@@ -46,7 +53,7 @@ settings:
   scrolling.smooth:
     global: true
   statusbar.show:
-    global: never
+    global: always
   tabs.show:
     global: never
   zoom.default:
