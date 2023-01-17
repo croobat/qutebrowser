@@ -157,7 +157,12 @@ ytl https://www.youtube.com/playlist?list=WL
 libretro-thumbnails http://thumbnails.libretro.com/
 <DEV>crates https://crates.io/
 crates https://crates.io/
-<LEA>odin https://www.theodinproject.com/lessons/foundations-introduction-to-web-development
-odin https://www.theodinproject.com/lessons/foundations-introduction-to-web-development
-<LEA>top https://www.theodinproject.com/lessons/foundations-introduction-to-web-development
-top https://www.theodinproject.com/lessons/foundations-introduction-to-web-development
+<LEA>odin https://www.theodinproject.com
+odin https://www.theodinproject.com
+<LEA>top https://www.theodinproject.com
+top https://www.theodinproject.com
+hugo https://gohugo.io/
+<DEV>hugo https://gohugo.io/
+local http://127.0.0.1
+tachidesk http://127.0.0.1:4567/library
+lion https://gitlab.com/desarrollo_lionsystems
