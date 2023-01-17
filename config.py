@@ -23,8 +23,9 @@ c.url.searchengines = {
     'aur': 'https://archlinux.org/packages/?sort=&q={}',
     'pexels': 'https://www.pexels.com/search/{}',
     'gh': 'https://github.com/search?q={}',
+    'gl': 'https://gitlab.com/search?q={}',
     'pirate': 'https://thepiratebay.org/search.php?q={}',
-    'reddit': 'https://www.reddit.com/r/{}',
+    'red': 'https://www.reddit.com/r/{}',
     'wiki': 'https://en.wikipedia.org/wiki/{}',
     'node' : 'https://www.npmjs.com/search?q={}',
     'doli': 'https://wiki.dolibarr.org/index.php?title=Table_llx_{}'
