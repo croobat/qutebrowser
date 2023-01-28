@@ -6,42 +6,49 @@ import subprocess
 import os
 from qutebrowser.api import interceptor
 
+# Dracula color scheme
+import dracula.draw
+
 # Load existing settings made via :set
 config.load_autoconfig(True)
 
 #  ╭───────╮
 #  │ Pages │
 #  ╰───────╯
-c.url.default_page = 'https://www.google.com'
-c.url.start_pages = 'https://www.google.com'
+c.url.default_page = "https://www.google.com"
+c.url.start_pages = "https://www.google.com"
 c.url.searchengines = {
-    'DEFAULT': 'https://www.google.com/search?q={}',
-    'yt': 'https://www.youtube.com/results?search_query={}',
-    'amazon': 'https://www.amazon.com/s?k={}',
-    'mercadolibre': 'https://listado.mercadolibre.com.mx/{}',
-    'aw': 'https://wiki.archlinux.org/?search={}',
-    'aur': 'https://archlinux.org/packages/?sort=&q={}',
-    'pexels': 'https://www.pexels.com/search/{}',
-    'gh': 'https://github.com/search?q={}',
-    'gl': 'https://gitlab.com/search?q={}',
-    'pirate': 'https://thepiratebay.org/search.php?q={}',
-    'red': 'https://www.google.com/search?q=site%3Areddit.com {}',
-    'wiki': 'https://en.wikipedia.org/wiki/{}',
-    'node' : 'https://www.npmjs.com/search?q={}',
-    'doli': 'https://wiki.dolibarr.org/index.php?title=Table_llx_{}'
+    "DEFAULT": "https://www.google.com/search?q={}",
+    "yt": "https://www.youtube.com/results?search_query={}",
+    "amazon": "https://www.amazon.com/s?k={}",
+    "mercadolibre": "https://listado.mercadolibre.com.mx/{}",
+    "aw": "https://wiki.archlinux.org/?search={}",
+    "aur": "https://archlinux.org/packages/?sort=&q={}",
+    "pexels": "https://www.pexels.com/search/{}",
+    "gh": "https://github.com/search?q={}",
+    "gl": "https://gitlab.com/search?q={}",
+    "pirate": "https://thepiratebay.org/search.php?q={}",
+    "red": "https://www.google.com/search?q=site%3Areddit.com {}",
+    "wiki": "https://en.wikipedia.org/wiki/{}",
+    "node": "https://www.npmjs.com/search?q={}",
+    "doli": "https://wiki.dolibarr.org/index.php?title=Table_llx_{}",
 }
 
 #  ╭─────────╮
 #  │ Aliases │
 #  ╰─────────╯
 c.aliases = {
-    'q': 'close',
-    'qa': 'quit',
-    'w': 'session-save',
-    'wq': 'quit --save',
-    'wqa': 'quit --save',
-    'color-darculized': 'config-cycle content.user_stylesheets ~/.config/qutebrowser/solarized-everything-css/css/darculized/darculized-all-sites.css ""',
-    'color-gruvbox': 'config-cycle content.user_stylesheets ~/.config/qutebrowser/solarized-everything-css/css/gruvbox/gruvbox-all-sites.css ""',
+    "q": "close",
+    "qa": "quit",
+    "w": "session-save",
+    "wq": "quit --save",
+    "wqa": "quit --save",
+    "color-darculized": 'config-cycle content.user_stylesheets \
+                        ~/.config/qutebrowser/solarized-everything-css/css/\
+                        darculized/darculized-all-sites.css ""',
+    "color-gruvbox": 'config-cycle content.user_stylesheets \
+                      ~/.config/qutebrowser/solarized-everything-css/css/\
+                      gruvbox/gruvbox-all-sites.css ""',
 }
 
 #  ╭──────────╮
@@ -49,37 +56,38 @@ c.aliases = {
 #  ╰──────────╯
 # unbindings
 unbindings = {
-    '=',
-    '+',
-    '-',
+    "=",
+    "+",
+    "-",
 }
 for unbinding in unbindings:
-    config.unbind(unbinding, mode='normal')
+    config.unbind(unbinding, mode="normal")
 
 # bindings
 bindings = {
     # Vim-like
-    'j': 'run-with-count 4 scroll down',
-    'k': 'run-with-count 4 scroll up',
-    '<Ctrl-j>': 'run-with-count 15 scroll down',
-    '<Ctrl-k>': 'run-with-count 15 scroll up',
-    'J': 'tab-prev',
-    'K': 'tab-next',
-    'ZQ': 'quit',
-    'ZZ': 'quit --save',
+    "j": "run-with-count 4 scroll down",
+    "k": "run-with-count 4 scroll up",
+    "<Ctrl-j>": "run-with-count 15 scroll down",
+    "<Ctrl-k>": "run-with-count 15 scroll up",
+    "J": "tab-prev",
+    "K": "tab-next",
+    "ZQ": "quit",
+    "ZZ": "quit --save",
     # Toggle show
-    'xb': 'config-cycle statusbar.show always never',
-    'xt': 'config-cycle tabs.show always never',
-    'xx': 'config-cycle statusbar.show always never;; config-cycle tabs.show always never',
+    "xb": "config-cycle statusbar.show always never",
+    "xt": "config-cycle tabs.show always never",
+    "xx": "config-cycle statusbar.show always never;; \
+        config-cycle tabs.show always never",
     # Hints
-    'yf': 'hint links yank',
-    'yF': 'hint all yank',
+    "yf": "hint links yank",
+    "yF": "hint all yank",
     # Greasemonkey plugins
-    ',': 'greasemonkey-reload ;; reload',
+    ",": "greasemonkey-reload ;; reload",
     # Better zoom keys
-    '0': 'zoom',
-    '=': 'zoom-in',
-    '-': 'zoom-out',
+    "0": "zoom",
+    "=": "zoom-in",
+    "-": "zoom-out",
 }
 for binding in bindings:
     config.bind(binding, bindings[binding])
@@ -98,17 +106,17 @@ insertBindings = {
     "<Ctrl-d>": "fake-key <Delete>",
     "<Ctrl-w>": "fake-key <Ctrl-Backspace>",
     "<Ctrl-u>": "fake-key <Shift-Home><Delete>",
-    "<Ctrl-k>": "fake-key <Shift-End><Delete>"
+    "<Ctrl-k>": "fake-key <Shift-End><Delete>",
 }
 for binding in insertBindings:
-    config.bind(binding, insertBindings[binding], 'insert')
+    config.bind(binding, insertBindings[binding], "insert")
 
 #  ╭─────────╮
 #  │ Options │
 #  ╰─────────╯
 # Font
-c.fonts.default_family = 'Recursive Mono Linear Static'
-c.fonts.default_size = '9pt'
+c.fonts.default_family = "Recursive Mono Linear Static"
+c.fonts.default_size = "9pt"
 
 # Smooth scroll
 c.scrolling.smooth = False
@@ -117,7 +125,7 @@ c.scrolling.smooth = False
 c.content.autoplay = False
 
 # Downloads location
-c.downloads.location.directory = '~/Downloads'
+c.downloads.location.directory = "~/Downloads"
 # Abort HTTP downloads from HTTPS pages
 c.downloads.prevent_mixed_content = False
 
@@ -125,55 +133,59 @@ c.downloads.prevent_mixed_content = False
 c.auto_save.interval = 15000
 
 # Editor for editor-* commands
-c.editor.command = ['nvim', '-f', '{file}', '-c', 'normal {line}G{column0}l']
+c.editor.command = ["nvim", "-f", "{file}", "-c", "normal {line}G{column0}l"]
 
 # Status bar
-c.statusbar.show = 'never'
+c.statusbar.show = "never"
 
 # Tab bar
-c.tabs.show = 'multiple'
+c.tabs.show = "multiple"
 
 #  ╭───────────────╮
 #  │ ## Permisions │
 #  ╰───────────────╯
 # JavaScript{{{
-config.set('content.javascript.enabled', True, 'chrome-devtools://*')
-config.set('content.javascript.enabled', True, 'devtools://*')
-config.set('content.javascript.enabled', True, 'chrome://*/*')
-config.set('content.javascript.enabled', True, 'qute://*/*')
+config.set("content.javascript.enabled", True, "chrome-devtools://*")
+config.set("content.javascript.enabled", True, "devtools://*")
+config.set("content.javascript.enabled", True, "chrome://*/*")
+config.set("content.javascript.enabled", True, "qute://*/*")
 
 # Cookies
-config.set('content.cookies.accept', 'all', 'chrome-devtools://*')
-config.set('content.cookies.accept', 'all', 'devtools://*')
+config.set("content.cookies.accept", "all", "chrome-devtools://*")
+config.set("content.cookies.accept", "all", "devtools://*")
 
 # Load images
-config.set('content.images', True, 'chrome-devtools://*')
-config.set('content.images', True, 'devtools://*')
+config.set("content.images", True, "chrome-devtools://*")
+config.set("content.images", True, "devtools://*")
 
 # Notifications
-config.set('content.notifications.enabled', True, 'https://www.reddit.com')
+config.set("content.notifications.enabled", True, "https://www.reddit.com")
 
 # Accept_language header
-config.set('content.headers.accept_language', '', 'https://matchmaker.krunker.io/*')
+config.set("content.headers.accept_language", "",
+           "https://matchmaker.krunker.io/*")
 
 # TLS certificate
-c.content.tls.certificate_errors = 'load-insecurely'
+c.content.tls.certificate_errors = "load-insecurely"
 
 # User agents
 config.set(
-    'content.headers.user_agent',
-    'Mozilla/5.0 ({os_info}) AppleWebKit/{webkit_version} (KHTML, like Gecko) {upstream_browser_key}/{upstream_browser_version} Safari/{webkit_version}',
-    'https://web.whatsapp.com/'
+    "content.headers.user_agent",
+    "Mozilla/5.0 ({os_info}) AppleWebKit/{webkit_version} \
+        (KHTML, like Gecko) {upstream_browser_key}/{upstream_browser_version} \
+        Safari/{webkit_version}",
+    "https://web.whatsapp.com/",
 )
 config.set(
-    'content.headers.user_agent',
-    'Mozilla/5.0 ({os_info}; rv:90.0) Gecko/20100101 Firefox/90.0',
-    'https://accounts.google.com/*'
+    "content.headers.user_agent",
+    "Mozilla/5.0 ({os_info}; rv:90.0) Gecko/20100101 Firefox/90.0",
+    "https://accounts.google.com/*",
 )
 config.set(
-    'content.headers.user_agent',
-    'Mozilla/5.0 ({os_info}) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99 Safari/537.36',
-    'https://*.slack.com/*'
+    "content.headers.user_agent",
+    "Mozilla/5.0 ({os_info}) AppleWebKit/537.36 \
+        (KHTML, like Gecko) Chrome/99 Safari/537.36",
+    "https://*.slack.com/*",
 )
 # }}}
 
@@ -181,12 +193,13 @@ config.set(
 #  │ Style │
 #  ╰───────╯
 # Dark mode{{{
-c.colors.webpage.preferred_color_scheme = 'dark'
+c.colors.webpage.preferred_color_scheme = "dark"
 config.set("colors.webpage.darkmode.enabled", True)
 
 # Dracula color scheme
 import dracula.draw
+
 dracula.draw.blood(c)
 
 # Custom styles
-c.content.user_stylesheets =  ['~/.config/qutebrowser/styles.css']# }}}
+c.content.user_stylesheets = ["~/.config/qutebrowser/styles.css"]  # }}}
