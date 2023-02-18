@@ -116,31 +116,16 @@ for binding in insertBindings:
 #  ╭─────────╮
 #  │ Options │
 #  ╰─────────╯
-# Font
 c.fonts.default_family = "Recursive Mono Linear Static"
 c.fonts.default_size = "9pt"
-
-# Smooth scroll
+c.search.incremental = False
 c.scrolling.smooth = False
-
-# Youtube autoplay
 c.content.autoplay = False
-
-# Downloads location
 c.downloads.location.directory = "~/Downloads"
-# Abort HTTP downloads from HTTPS pages
 c.downloads.prevent_mixed_content = False
-
-# Time (ms) between auto-saves (config, cookies, etc)
 c.auto_save.interval = 15000
-
-# Editor for editor-* commands
 c.editor.command = ["nvim", "-f", "{file}", "-c", "normal {line}G{column0}l"]
-
-# Status bar
 c.statusbar.show = "never"
-
-# Tab bar
 c.tabs.show = "multiple"
 
 #  ╭───────────────╮
