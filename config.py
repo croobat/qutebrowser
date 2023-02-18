@@ -32,6 +32,8 @@ c.url.searchengines = {
     "wiki": "https://en.wikipedia.org/wiki/{}",
     "node": "https://www.npmjs.com/search?q={}",
     "doli": "https://wiki.dolibarr.org/index.php?title=Table_llx_{}",
+    "trad": "https://translate.google.com/?hl=en&sl=auto&tl=en&text={}&op=translate",
+    "trans": "https://translate.google.com/?hl=es&sl=auto&tl=es&text={}&op=translate",
 }
 
 #  ╭─────────╮
