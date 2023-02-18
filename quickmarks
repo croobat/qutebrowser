@@ -63,7 +63,7 @@
 <STO>itch https://itch.io/
 <STO>jameco https://www.jameco.com/
 <STO>libgen http://libgen.st/
-<STO>mercadolibre https://www.mercadolibre.com.mx/
+<STO>ml https://www.mercadolibre.com.mx/
 <STO>newgrounds https://www.newgrounds.com/
 <STO>pirate https://thepiratebay.org/
 <STR>9anime https://9anime.to/
@@ -123,7 +123,7 @@ local http://127.0.0.1
 lutris https://lutris.net/
 mangasee https://mangasee123.com/
 mentor https://www.frontendmentor.io/
-mercadolibre https://www.mercadolibre.com.mx/
+ml https://www.mercadolibre.com.mx/
 metasrc https://www.metasrc.com/aram/na/tierlist
 moe https://piracy.moe/
 mov https://moviesjoy.to/
@@ -172,3 +172,7 @@ shellcheck https://www.shellcheck.net/wiki/
 zoro https://zoro.to/
 <PIR>yugen https://yugen.to/
 yugen https://yugen.to/
+<LIN>rosetta https://wiki.archlinux.org/title/Pacman/Rosetta
+rosetta https://wiki.archlinux.org/title/Pacman/Rosetta
+<DEV>nounproject https://thenounproject.com/
+nounproject https://thenounproject.com/
