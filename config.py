@@ -45,12 +45,12 @@ c.aliases = {
     "w": "session-save",
     "wq": "quit --save",
     "wqa": "quit --save",
-    "color-darculized": 'config-cycle content.user_stylesheets \
-                        ~/.config/qutebrowser/solarized-everything-css/css/\
-                        darculized/darculized-all-sites.css ""',
-    "color-gruvbox": 'config-cycle content.user_stylesheets \
-                      ~/.config/qutebrowser/solarized-everything-css/css/\
-                      gruvbox/gruvbox-all-sites.css ""',
+    # "color-darculized": 'config-cycle content.user_stylesheets \
+    #                     ~/.config/qutebrowser/solarized-everything-css/css/\
+    #                     darculized/darculized-all-sites.css ""',
+    # "color-gruvbox": 'config-cycle content.user_stylesheets \
+    #                   ~/.config/qutebrowser/solarized-everything-css/css/\
+    #                   gruvbox/gruvbox-all-sites.css ""',
 }
 
 #  ╭──────────╮
@@ -68,10 +68,10 @@ for unbinding in unbindings:
 # bindings
 bindings = {
     # Vim-like
-    "j": "run-with-count 4 scroll down",
-    "k": "run-with-count 4 scroll up",
-    "<Ctrl-j>": "run-with-count 15 scroll down",
-    "<Ctrl-k>": "run-with-count 15 scroll up",
+    "j": "cmd-run-with-count 4 scroll down",
+    "k": "cmd-run-with-count 4 scroll up",
+    "<Ctrl-j>": "cmd-run-with-count 15 scroll down",
+    "<Ctrl-k>": "cmd-run-with-count 15 scroll up",
     "J": "tab-prev",
     "K": "tab-next",
     "ZQ": "quit",
@@ -136,7 +136,7 @@ config.set("content.javascript.enabled", True, "chrome-devtools://*")
 config.set("content.javascript.enabled", True, "devtools://*")
 config.set("content.javascript.enabled", True, "chrome://*/*")
 config.set("content.javascript.enabled", True, "qute://*/*")
-config.set("content.javascript.can_access_clipboard", True)
+config.set("content.javascript.clipboard", 'access-paste')
 
 # Cookies
 config.set("content.cookies.accept", "all", "chrome-devtools://*")

@@ -21,6 +21,8 @@ settings:
     global: dark
   content.desktop_capture:
     https://meet.jit.si: true
+  content.geolocation:
+    https://auth.gbm.com: true
   content.media.audio_capture:
     https://demo6.bigbluebutton.org: true
     https://meet.jit.si: true
